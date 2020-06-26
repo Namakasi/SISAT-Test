@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/app_margin_small"
+    android:paddingBottom="@dimen/app_margin_small"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="@dimen/app_margin_medium"
+        android:paddingBottom="@dimen/app_margin_small"
+        android:layout_marginEnd="@dimen/app_margin_medium"
+        android:layout_marginStart="@dimen/app_margin_medium">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/label_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/AppTextTitles"
+                android:text="@string/text_group_title"
+                android:layout_marginHorizontal="@dimen/app_margin_medium"
+                android:layout_marginTop="@dimen/app_margin_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/image_delete"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/app_margin_small"
+                android:layout_marginTop="@dimen/app_margin_small"
+                app:layout_constraintTop_toTopOf="parent"
+                android:scaleType="centerInside"
+                android:translationZ="1dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_trash"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/label_latitude"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/app_margin_medium"
+                android:layout_marginHorizontal="@dimen/app_margin_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:errorEnabled="true"
+                app:layout_constraintTop_toBottomOf="@id/label_title"
+
+                android:hint="@string/text_latitude">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_latitude"
+                    style="@style/AppTextBody"
+                    android:inputType="numberSigned|numberDecimal"
+                    android:drawableStart="@drawable/ic_latitude"
+                    android:background="@android:color/white"
+                    android:drawablePadding="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/label_longitude"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/app_margin_small"
+                android:paddingBottom="@dimen/app_margin_small"
+                android:layout_marginHorizontal="@dimen/app_margin_medium"
+                app:errorEnabled="true"
+                android:layout_marginBottom="@dimen/app_margin_small"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/label_latitude"
+                android:hint="@string/text_longitude">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:drawableStart="@drawable/ic_longitude"
+                    android:background="@android:color/white"
+                    android:drawablePadding="12dp"
+                    android:inputType="numberSigned|numberDecimal"
+                    style="@style/AppTextBody"
+                    android:id="@+id/edit_longitude" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SISAT Test</string>
+    <string name="text_latitude">Latitud</string>
+    <string name="text_group_title">Coordenada %1$d</string>
+    <string name="button_add_more">Agregar</string>
+    <string name="button_continue">Continuar</string>
+    <string name="text_longitude">Longitud</string>
+    <string name="title_activity_map">Map</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="error_latitude">Los valores deben estar entre -90 y 90.</string>
+    <string name="error_longitude">Los valores deben estar entre -180 y 180.</string>
+    <string name="text_values_invalid">No se han ingresado todos los datos. Verifica los campos.</string>
+</resources>
